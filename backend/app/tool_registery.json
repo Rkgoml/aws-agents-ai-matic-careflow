@@ -1,0 +1,250 @@
+{
+    "tools": {
+        "SQL_Tools": [
+            {
+                "tool_name": "custom_query",
+                "description": "Takes any natural language query as input and provides the desired data as output",
+                "input": [
+                    "connection_id",
+                    "user_query"
+                ],
+                "output": "required_data"
+            },
+            {
+                "tool_name": "patient_service",
+                "description": "Patient data management service for retrieving and processing patient information",
+                "input": [
+                    "patient_id",
+                    "connection_id"
+                ],
+                "output": "patient_summary"
+            },
+            {
+                "tool_name": "medication_service",
+                "description": "Medication data management service for handling patient medication records",
+                "input": [
+                    "patient_id",
+                    "connection_id"
+                ],
+                "output": "medication_summary"
+            },
+            {
+                "tool_name": "followup_service",
+                "description": "Follow-up appointment management service for scheduling and tracking patient follow-ups",
+                "input": [
+                    "patient_id",
+                    "connection_id"
+                ],
+                "output": "followup_summary"
+            },
+            {
+                "tool_name": "condition_service",
+                "description": "Medical condition management service for handling patient medical conditions and diagnoses",
+                "input": [
+                    "patient_id",
+                    "connection_id"
+                ],
+                "output": "condition_summary"
+            },
+            {
+                "tool_name": "lab_service",
+                "description": "Lab results management service for processing and retrieving laboratory test results",
+                "input": [
+                    "patient_id",
+                    "connection_id"
+                ],
+                "output": "labresult_summary"
+            },
+            {
+                "tool_name": "procedure_service",
+                "description": "Medical procedure management service for handling patient medical procedures",
+                "input": [
+                    "patient_id",
+                    "connection_id"
+                ],
+                "output": "procedure_summary"
+            },
+            {
+                "tool_name": "allergy_service",
+                "description": "Allergy information management service for tracking patient allergies and reactions",
+                "input": [
+                    "patient_id",
+                    "connection_id"
+                ],
+                "output": "allergy_summary"
+            },
+            {
+                "tool_name": "appointment_service",
+                "description": "Appointment scheduling service for managing patient appointments",
+                "input": [
+                    "patient_id",
+                    "connection_id"
+                ],
+                "output": "appointment_summary"
+            },
+            {
+                "tool_name": "diet_service",
+                "description": "Diet and nutrition management service for handling patient dietary information",
+                "input": [
+                    "patient_id",
+                    "connection_id"
+                ],
+                "output": "diet_summary"
+            },
+            {
+                "tool_name": "patient_dashboard_service",
+                "description": "Patient dashboard data service for comprehensive patient overview",
+                "input": [
+                    "patient_id",
+                    "connection_id"
+                ],
+                "output": "patientdashboard_summary"
+            }
+        ],
+        "Cerner_Tools": [
+            {
+                "tool_name": "generate_summary_patient",
+                "description": "Generate Cerner patient summary with comprehensive patient information",
+                "input": [
+                    "patient_id",
+                    "organization"
+                ],
+                "output": "patient_summary"
+            },
+            {
+                "tool_name": "generate_summary_medication",
+                "description": "Generate Cerner medication summary for patient's medication history",
+                "input": [
+                    "patient_id",
+                    "organization"
+                ],
+                "output": "medication_summary"
+            },
+            {
+                "tool_name": "generate_summary_diagnosis",
+                "description": "Generate Cerner diagnosis summary with patient's medical diagnoses",
+                "input": [
+                    "patient_id",
+                    "organization"
+                ],
+                "output": "diagnosis_summary"
+            },
+            {
+                "tool_name": "generate_summary_followup",
+                "description": "Generate Cerner follow-up summary for appointment scheduling",
+                "input": [
+                    "patient_id",
+                    "organization"
+                ],
+                "output": "follow-up_summary"
+            },
+            {
+                "tool_name": "generate_summary_lab",
+                "description": "Generate Cerner lab summary with laboratory test results",
+                "input": [
+                    "patient_id",
+                    "organization"
+                ],
+                "output": "lab_results_summary"
+            },
+            {
+                "tool_name": "generate_Procedure_summary",
+                "description": "Generate Cerner procedure summary for medical procedures",
+                "input": [
+                    "patient_id",
+                    "organization"
+                ],
+                "output": "procedure_summary"
+            },
+            {
+                "tool_name": "generate_allergy",
+                "description": "Generate Cerner allergy summary for patient's allergy information",
+                "input": [
+                    "patient_id",
+                    "organization"
+                ],
+                "output": "allergy_summary"
+            },
+            {
+                "tool_name": "generate_agent_Response_followup",
+                "description": "Generate Cerner upcoming appointment summary",
+                "input": [
+                    "patient_id",
+                    "organization"
+                ],
+                "output": "upcoming_appointment_summary"
+            },
+            {
+                "tool_name": "generate_agent_Response_nutrition",
+                "description": "Generate Cerner nutrition summary with dietary guidance",
+                "input": [
+                    "patient_id",
+                    "organization"
+                ],
+                "output": "nutrition_summary"
+            },
+            {
+                "tool_name": "get_diet_data",
+                "description": "Get Cerner diet data with nutritional information",
+                "input": [
+                    "patient_id",
+                    "organization"
+                ],
+                "output": "diet_data"
+            },
+            {
+                "tool_name": "riskpanel",
+                "description": "Generate Cerner risk assessment with health risk evaluation",
+                "input": [
+                    "patient_id",
+                    "organization"
+                ],
+                "output": "risk_assessment_data"
+            },
+            {
+                "tool_name": "aftercare",
+                "description": "Generate Cerner aftercare summary with care instructions",
+                "input": [
+                    "patient_id",
+                    "organization"
+                ],
+                "output": "aftercare_summary"
+            },
+            {
+                "tool_name": "generate_vitals_summary_endpoint",
+                "description": "Generate Cerner vital signs summary with patient vitals data",
+                "input": [
+                    "patient_id",
+                    "organization"
+                ],
+                "output": "vital_signs_summary"
+            }
+        ],
+        "Bed_Turnaround_Tools": [
+            {
+                "tool_name": "bed_turnaround_service",
+                "description": "Service for retrieving bed turnaround time data by disease",
+                "input": [],
+                "output": "list of diseases with avg, min, max turnaround hours, cleaning, prep, inspection times, total beds, and recent discharges"
+            },
+            {
+                "tool_name": "bed_availability_service",
+                "description": "Service for checking current bed availability and occupancy by department",
+                "input": [],
+                "output": "list of departments with total beds, occupied beds, available beds, beds in turnaround, avg wait time, occupancy rate"
+            },
+            {
+                "tool_name": "discharge_workflow_service",
+                "description": "Service for retrieving bed discharge and preparation workflow steps and timings",
+                "input": [],
+                "output": "workflow details including steps, duration, and responsible teams"
+            },
+            {
+                "tool_name": "turnaround_analytics_service",
+                "description": "Service for analyzing bed turnaround performance metrics and trends over time",
+                "input": [],
+                "output": "analytics summary including overall avg turnaround, best/worst performing diseases, bottlenecks, trends, and recommendations"
+            }
+        ]
+    }
+}

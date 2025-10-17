@@ -8,5 +8,6 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 3000,
+    allowedHosts: ['ai-matic-ui-alb-393848176.us-east-1.elb.amazonaws.com']
   },
 });

@@ -5,6 +5,7 @@ import StepLoader from "../components/StepLoader";
 import { generateWorkflow } from "../services/workflow";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 export default function Home() {
   const [workflow, setWorkflow] = useState(null);
@@ -20,8 +21,9 @@ export default function Home() {
       setWorkflow(data);
       navigate("/home/workflows");
     } catch (error) {
-      console.error("Failed to generate workflow:", error);
-      alert("Something went wrong while generating workflow.");
+      const errorMessage =
+        error.response?.data?.detail || "An unexpected error occurred";
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }

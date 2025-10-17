@@ -27,7 +27,9 @@ export default function Login() {
       toast.success("Login Successfull");
       navigate("/home");
     } catch (error) {
-      toast.error(error.message);
+      const errorMessage =
+        error.response?.data?.detail || "An unexpected error occurred";
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }

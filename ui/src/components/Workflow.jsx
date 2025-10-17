@@ -4,6 +4,7 @@ import WorkFlowDiagram from "./WorkFlowDiagram";
 import Cookies from "js-cookie";
 import { getWorkflowList, executeWorkflow } from "../services/workflow";
 import ReportMarkdown from "./ReportMarkdown";
+import toast from "react-hot-toast";
 
 export default function Workflow() {
   const [workflows, setWorkflows] = useState([]);
@@ -25,7 +26,9 @@ export default function Workflow() {
           setSelectedWorkflow(response[0]?.id || null);
         }
       } catch (error) {
-        console.error("Failed to fetch workflows:", error);
+        const errorMessage =
+          error.response?.data?.detail || "An unexpected error occurred";
+        toast.error(errorMessage);
       } finally {
         setFetching(false);
       }

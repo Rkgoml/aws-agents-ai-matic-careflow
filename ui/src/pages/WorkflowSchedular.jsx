@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Calendar, Clock, Play, Loader2, PlusCircle } from "lucide-react";
 import Cookies from "js-cookie";
 import { getWorkflowList } from "../services/workflow";
+import toast from "react-hot-toast";
 
 export default function WorkflowSchedular() {
   const [workflows, setWorkflows] = useState([]);
@@ -19,7 +20,9 @@ export default function WorkflowSchedular() {
         if (Array.isArray(res)) setWorkflows(res);
         else if (Array.isArray(res.data)) setWorkflows(res.data);
       } catch (err) {
-        console.error("Error fetching workflows:", err);
+        const errorMessage =
+          err.response?.data?.detail || "An unexpected error occurred";
+        toast.error(errorMessage);
       } finally {
         setLoading(false);
       }

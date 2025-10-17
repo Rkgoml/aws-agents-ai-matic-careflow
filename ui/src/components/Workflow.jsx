@@ -126,7 +126,7 @@ export default function Workflow() {
               <button
                 key={wf.id}
                 onClick={() => setSelectedWorkflow(wf.id)}
-                className={`px-5 py-4 rounded-lg font-medium text-sm transition text-left ${
+                className={`px-5 py-4 rounded-lg font-medium text-sm transition text-left cursor-pointer ${
                   selectedWorkflow === wf.id
                     ? "bg-orange-500 text-white"
                     : "bg-gray-50 text-gray-700 hover:bg-gray-100 border border-gray-200"
@@ -155,7 +155,7 @@ export default function Workflow() {
               <button
                 onClick={handleExecute}
                 disabled={loading}
-                className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-orange-500 text-white font-semibold hover:bg-orange-600 disabled:bg-orange-300 transition-colors"
+                className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-orange-500 text-white font-semibold hover:bg-orange-600 disabled:bg-orange-300 transition-colors cursor-pointer"
               >
                 {loading ? (
                   <>
@@ -208,7 +208,7 @@ export default function Workflow() {
                     >
                       <button
                         onClick={() => toggleHistory(entry.id)}
-                        className="w-full px-5 py-4 bg-gray-100 hover:bg-gray-200 transition flex items-center justify-between"
+                        className="w-full px-5 py-4 bg-gray-100 hover:bg-gray-200 transition flex items-center justify-between cursor-pointer"
                       >
                         <div className="text-left">
                           <p className="font-medium text-gray-900">
@@ -245,7 +245,7 @@ export default function Workflow() {
                           </div>
                           <button
                             onClick={() => handleDeleteHistory(entry.id)}
-                            className="text-sm text-red-600 hover:text-red-700 flex items-center gap-1 transition"
+                            className="text-sm text-red-600 hover:text-red-700 flex items-center gap-1 transition cursor-pointer"
                           >
                             <Trash2 size={16} />
                             Delete

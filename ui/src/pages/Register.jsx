@@ -102,7 +102,7 @@ export default function Register() {
           <button
             type="submit"
             disabled={loading}
-            className={`w-full flex items-center justify-center gap-2 px-4 py-4 rounded-md text-white text-lg font-semibold ${
+            className={`w-full flex items-center justify-center gap-2 px-4 py-4 rounded-md text-white text-lg font-semibold cursor-pointer ${
               loading
                 ? "bg-orange-300 cursor-not-allowed"
                 : "bg-orange-500 hover:bg-orange-600"

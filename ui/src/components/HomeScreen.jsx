@@ -48,7 +48,7 @@ export default function HomeScreen({ loading, onStart }) {
             <button
               onClick={handleStart}
               disabled={loading || !prompt.trim()}
-              className="w-full flex items-center justify-center gap-3 px-6 py-5 rounded-lg bg-orange-500 text-white text-lg font-semibold hover:bg-orange-600 disabled:bg-orange-300 transition-colors"
+              className="w-full flex items-center justify-center gap-3 px-6 py-5 rounded-lg bg-orange-500 text-white text-lg font-semibold hover:bg-orange-600 disabled:bg-orange-300 transition-colors cursor-pointer"
             >
               {loading ? (
                 <>

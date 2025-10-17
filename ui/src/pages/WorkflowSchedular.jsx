@@ -80,7 +80,7 @@ export default function WorkflowSchedular() {
                   <button
                     key={wf.id}
                     onClick={() => setSelectedWorkflow(wf.id)}
-                    className={`w-full text-left px-4 py-3 rounded-lg border text-sm font-medium transition ${
+                    className={`w-full text-left px-4 py-3 rounded-lg border text-sm font-medium transition cursor-pointer ${
                       selectedWorkflow === wf.id
                         ? "bg-orange-500 text-white border-orange-600"
                         : "bg-white hover:bg-gray-100 border-gray-300 text-gray-700"
@@ -145,7 +145,7 @@ export default function WorkflowSchedular() {
 
               <button
                 onClick={handleSchedule}
-                className="w-full sm:w-auto mt-4 flex items-center justify-center gap-2 px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition"
+                className="w-full sm:w-auto mt-4 flex items-center justify-center gap-2 px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition cursor-pointer"
               >
                 <PlusCircle size={18} />
                 Add Schedule
@@ -202,7 +202,7 @@ export default function WorkflowSchedular() {
                       <td className="py-3 px-4 text-center">
                         <button
                           onClick={() => markAsExecuted(s.id)}
-                          className="flex items-center gap-1 justify-center px-3 py-1 text-sm text-white bg-green-500 hover:bg-green-600 rounded-lg transition"
+                          className="flex items-center gap-1 justify-center px-3 py-1 text-sm text-white bg-green-500 hover:bg-green-600 rounded-lg transition cursor-pointer"
                         >
                           <Play size={14} />
                           Run Now

@@ -1,25 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import goml from "../assets/goml.webp";
-import ai from "../assets/ai.webp";
 
 function Navbar() {
   const navLinks = [
-    { href: "/home", label: "Create New Agent", exact: true },
+    { href: "/home", label: "Workflow Generator", exact: true },
     { href: "/home/workflows", label: "Workflows" },
-    // { href: "/home/registry", label: "Registry" },
     { href: "/home/schedular", label: "Schedular" },
   ];
 
   return (
     <header className="relative  border-gray-200  py-6">
-      {/* <img
-        src={ai}
-        alt="AI Logo"
-        width={90}
-        height={90}
-        className="absolute top-1 left-6"
-      /> */}
       <img
         src={goml}
         alt="GoML Logo"

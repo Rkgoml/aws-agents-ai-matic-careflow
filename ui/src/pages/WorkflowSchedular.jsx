@@ -60,6 +60,9 @@ export default function WorkflowSchedular() {
         <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">
           <Clock className="text-orange-500" /> Workflow Scheduler
         </h1>
+        <p className="text-sm text-gray-500 text-center mb-6 italic">
+          Note: This is just an idea of implementation
+        </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left: Workflow Selection */}

@@ -1,13 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
 import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
-    host: '0.0.0.0',
+    host: "0.0.0.0",
     port: 3000,
-    allowedHosts: ['ai-matic-ui-alb-393848176.us-east-1.elb.amazonaws.com']
+    allowedHosts: [
+      "ai-matic-ui-alb-393848176.us-east-1.elb.amazonaws.com",
+      "ai-matic-careflow.goml.io",
+    ],
   },
 });
